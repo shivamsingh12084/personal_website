@@ -1,0 +1,78 @@
+:root {
+    --fontfamily:var(--bs-body-font-family)
+    --fontsize:var(--bs-body-font-size)
+    --fontweight:var(--bs-body-font-weight)
+    --lineheight:var(--bs-body-line-height)
+    --color:var(--bs-body-color)
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: black !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.55);
+    border-radius: 3px;
+    border-color: black !important;
+}
+.navbarcolor {
+    background-color: black;
+}
+
+
+
+/* Hero Section */
+.bgimage {
+    background: url(/static/images/personalweb.png);
+    object-fit: cover;
+}
+.hero-top-margin {
+    margin-top: 5rem;
+}
+.upper-hero-text {
+    color: gray;
+}
+.main-hero-text {
+    font-size: calc(2rem + 2.1vw) !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+.lower-hero-text {
+   
+}
+
+.btn-primary {
+    background-color: linear-gradient(to right,#1345e6 0%,#ed239f 51%,#1345e6 100%) !important;
+    background-image: linear-gradient(to right, #1345e6, #8138d8, #b229c6, #d51eb3, #ed239f);
+}
+.btn-primary:hover {
+    background-image: linear-gradient(to left, #1345e6, #8138d8, #b229c6, #d51eb3, #ed239f);
+}
+
+
+/* Services Section */
+.backgound-color {
+    background-color: coral;
+}
+.textstyle {
+    font-size: 1.1rem;
+}
+
+.bordercurv {
+    border-radius: 3rem !important;
+}
+
+/* Previous Work */
+.bg-secondary {
+    background-color: green !important;
+    background-image: url(/static/images/cta-bg.png);
+    
+}
+.testheight {
+    height: 20vh;
+    background-image: url(/static/images/testimonials/1);
+}
+.bg-testimonial {
+    background-color: #f3fbfe !important;
+}
