@@ -1,0 +1,166 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'messages.html' %}
+<section class="py-10 py-md-14 img-fluid overlay bg-cover " style="background-image: url(/static/images/image.jpg);" >
+    <div class="container m-lg-5 p-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+                <h1 class="display-2  text-white ">I am here to help</h1>
+                <p class="lead text-white mb-0">
+                    " I always want to hear from you! Let me know how i can help you and i'll do my very best. "
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-light">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>      </div>
+  </div>
+  <section class="py-7 py-md-9 border-bottom border-gray-300" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+
+          <!-- Button -->
+          
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row mt-md-5 mb-md-5 pb-md-5 pt-md-5">
+        <div class="col-12 col-md-4 text-center border-end border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1" style="font-size: smaller !important;">
+            Follow Me
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="#!" class="h4 text-primary" style="text-decoration: none; font-weight: normal; font-size: larger;">
+              On Twitter
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-4 text-center border-end border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1" style="font-size: smaller !important;">
+            Call anytime
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="#!" class="h4" style="text-decoration: none; font-weight: normal; font-size: larger;">
+              754-418-80639
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-4 text-center">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1" style="font-size: smaller !important;">
+            Email us
+          </h6>
+
+          <!-- Link -->
+          <a href="#!" class="h4" style="text-decoration: none; font-weight: normal; font-size: larger;">
+            shivamsingh12084@gmail.com
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+
+  <section class="pt-8 pt-md-11 pb-8 pb-md-14 bg-testimonial">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2 class="fw-bold">
+            Let me hear from you directly!
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-muted mb-7 mb-md-9">
+            We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10">
+
+          <!-- Form -->
+          <form method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label class="form-label" for="contactName">
+                    Email
+                  </label>
+
+                  <!-- Input -->
+                  {{ form.from_email }}
+
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label class="form-label" for="contactEmail">
+                    Subject
+                  </label>
+
+                  <!-- Input -->
+                  {{ form.subject }}
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group mb-7 mb-md-9">
+
+                  <!-- Label -->
+                  <label class="form-label" for="contactMessage">
+                    What can we help you with?
+                  </label>
+
+                  <!-- Input -->
+                  {{ form.detailed_message }}
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row justify-content-center">
+              <div class="col-auto">
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary lift mt-3 rounded-pill">
+                  Send message
+                </button>
+
+              </div>
+            </div> <!-- / .row -->
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+{% endblock content %}
