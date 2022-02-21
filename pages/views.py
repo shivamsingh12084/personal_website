@@ -37,7 +37,7 @@ class BlogPageView(TemplateView):
 class ContactPageView(FormView):
     form_class = DetailedContactForm
     template_name = 'contact.html'
-    success_url = '/contact'
+    success_url = 'https://kumarshivam.herokuapp.com'
 
     def form_valid(self , form):
         subject = form.cleaned_data['subject']
