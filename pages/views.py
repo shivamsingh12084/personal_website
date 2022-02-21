@@ -30,6 +30,10 @@ class PortfolioPageView(TemplateView):
     template_name = 'portfolio.html'
 
 
+class BlogPageView(TemplateView):
+    template_name = 'blog.html'
+
+
 class ContactPageView(FormView):
     form_class = DetailedContactForm
     template_name = 'contact.html'

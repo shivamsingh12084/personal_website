@@ -43,7 +43,7 @@
               <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -52,12 +52,14 @@
           </ul>
           <form class="d-flex  mb-0 pt-2">
             
-            <button class="btn  d-none d-lg-block rounded-pill hero-button btn-primary" type="submit">Hire Me</button>
+            <a href="{% url 'contact' %}" style="text-decoration: none;">
+              <button class="btn  d-none d-lg-block rounded-pill hero-button btn-primary" type="button">Hire Me</button>
+            </a>
           </form>
         </div>
         <div class="offcanvas-footer">
           <div class="conatiner mb-3 mb-md-0 px-3">
-            <a class="btn d-lg-none w-100 btn-primary rounded-pill" href="#modal-contact" data-bs-toggle="modal">Hire me</a>
+            <a class="btn d-lg-none w-100 btn-primary rounded-pill" href="{% url 'contact' %}">Hire me</a>
           </div>
         </div>
       </div>
@@ -93,9 +95,9 @@
           <div class="col-md-3 pb-4">
             <div class="widget widget-light">
               <h4 class="widget-title mb-3">Follow</h4>
-              <a class="btn-social bs-outline bs-light fa fa-twitter bs-lg me-2 mb-2 p-2 rounded-3 icon-color" href="#"><i class="ai-twitter"></i></a>
-              <a class="btn-social bs-outline bs-light fa fa-github bs-lg me-2 mb-2 p-2 rounded-3 icon-color" href="#"><i class="ai-instagram"></i></a>
-              <a class="btn-social bs-outline bs-light fa fa-google bs-lg mb-2 p-2 rounded-3 icon-color" href="#"><i class="ai-google"></i></a>
+              <a class="btn-social bs-outline bs-light fa fa-twitter bs-lg me-2 mb-2 p-2 rounded-3 icon-color" href="https://twitter.com/Shivam12084"><i class="ai-twitter"></i></a>
+              <a class="btn-social bs-outline bs-light fa fa-github bs-lg me-2 mb-2 p-2 rounded-3 icon-color" href="https://github.com/shivamsingh12084"><i class="ai-instagram"></i></a>
+              <a class="btn-social bs-outline bs-light fa fa-google bs-lg mb-2 p-2 rounded-3 icon-color" href="mailto: shivamsingh12084@gmail.com"><i class="ai-google"></i></a>
             </div>
           </div>
         </div>

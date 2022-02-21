@@ -4,7 +4,7 @@
 
 {% block title %}home{% endblock title %}
 {% block metadescription %} Full stack webdeveloper {% endblock metadescription %}
-{% block metakeywords %} fast , scalable , reliable with search engine optimization {% endblock metakeywords %}
+{% block metakeywords %} fast , scalable , reliable websites with search engine optimization {% endblock metakeywords %}
 
 
 {% block content %}
@@ -17,7 +17,9 @@
       <div class="col-lg-4 col-md-5 order-md-1 order-2 text-md-start text-center">
         <h1 class="display-4 mb-lg-4 mb-3 main-hero-text text-muted">Hey, I’m Shivam</h1>
         <h2 class="mb-lg-5 mb-4 text-muted">Full-stack Web Developer&amp; Freelancer</h2>
-        <button type="button" class="btn btn-primary btn-lg rounded-pill hero-button">SEE MY WORK</button>
+        <a href="{% url 'portfolio' %}">
+          <button type="button" class="btn btn-primary btn-lg rounded-pill hero-button">SEE MY WORK</button>
+        </a>
       </div>
       <div class="col-lg-8 col-md-6 order-md-2 order-1 mb-md-0 mb-grid-gutter"><img class="img-fluid" src="{% static 'images/hero-illustration.svg' %}" alt="Illustration"></div>
     </div>
@@ -57,34 +59,34 @@
     <div class="row align-items-center">
         <div class="col-lg-4 col-md-5 text-center text-md-start mb-5 mb-md-0 ">
             <h2 class="mb-3">Services I Provide</h2>
-            <p class="mb-4 pb-2 text-muted textstyle">Find aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint doloremque.</p>
-            <a class="btn btn-primary rounded-pill" href="#">More about me</a>
+            <p class="mb-4 pb-2 text-muted textstyle">I provide wide range of services like full-stack Django Web Development, DevOps, and User Experience..</p>
+            <a class="btn btn-primary rounded-pill" href="{% url 'about' %}">More about me</a>
         </div>
         <div class="col-lg-8 col-md-7 bg-position-center bg-repeat-0 " style="background-image: url(/static/images/bg-shape.svg);">
             <div class="mx-auto" style="max-width: 610px;">
               <div class="row align-items-center">
                 <div class="col-sm-6">
                   <div class="bg-light shadow-lg rounded-3 bordercurv p-4 mb-grid-gutter text-center text-sm-start mb-4"><img class="d-inline-block mb-4 mt-2" src="{% static 'images/01.svg' %}" alt="Icon" width="100">
-                    <h3 class="h5 mb-2">Strategy &amp; Innovation</h3>
-                    <p class="fs-sm">Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <h3 class="h5 mb-2">Django Web Development</h3>
+                    <p class="fs-sm">I am proficient in building roubust solutions from scratch with a focus on clean code with reuseable patterns.</p>
                   </div>
                   <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start mb-4"><img class="d-inline-block mb-4 mt-2" src="{% static 'images/02.svg' %}" alt="Icon" width="100">
-                    <h3 class="h5 mb-2">HR &amp; Talent</h3>
-                    <p class="fs-sm">Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <h3 class="h5 mb-2">Maintenance and Support</h3>
+                    <p class="fs-sm">Successful project doen't stop developing after launch. I provide peace of mind for python and django web product owners. </p>
                   </div>
                   <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start mb-4"><img class="d-inline-block mb-4 mt-2" src="{% static 'images/03.svg' %}" alt="Icon" width="100">
-                    <h3 class="h5 mb-2">Training &amp; Cetrification</h3>
-                    <p class="fs-sm">Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <h3 class="h5 mb-2">Frontend Development</h3>
+                    <p class="fs-sm">An accessible, thoughtfully considered front-end is key to delivering an enjoyable user experience. </p>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start mb-4"><img class="d-inline-block mb-4 mt-2" src="{% static 'images/04.svg' %}" alt="Icon" width="100">
-                    <h3 class="h5 mb-2">Advanced Analytics</h3>
-                    <p class="fs-sm">Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <h3 class="h5 mb-2">DevOps, Scaling &amp; Deployment</h3>
+                    <p class="fs-sm">I design solutions that are secure, stable, cost effective and scalable as per my clien. </p>
                   </div>
                   <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start mb-4"><img class="d-inline-block mb-4 mt-2" src="{% static 'images/05.svg' %}" alt="Icon" width="100">
-                    <h3 class="h5 mb-2">Sales &amp; Marketing</h3>
-                    <p class="fs-sm">Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <h3 class="h5 mb-2">Search Engine optimization</h3>
+                    <p class="fs-sm">Good and optimized SEO helps you rank higher in search results and make more people to see your website</p>
                   </div>
                 </div>
               </div>
@@ -96,49 +98,36 @@
 
   <!--Testimonials-->
   <section class="mt-5 bg-testimonial ">
-    <h2 class="text-center">What my clients say about me</h2>
+    
+    <h2 class="text-center text-muted" style="font-weight: bold;">What my clients say about me</h2>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner ">
           <div class="carousel-item active ">
-              <div class="container">
-                  <div class="row align-items-center">
-                    <div class="row justify-content-center">
-                        <img class="rounded-circle" style="width: 150px;" src="{% static 'images/clients/02.jpg' %}">
-                    </div>
-                    <div class="text-center">
-                        <h4 class="">Pankaj Kumar</h4>
-                        <h6 class="text-center">MD, C.G.T</h6>
-                        <p class=" text-muted  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit doloremque.</p>
-                    </div>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="row justify-content-center">
+                    <img class="rounded-circle img-fluid" style="width: 150px;" src="{% static 'images/clients/04.jpg' %}">
+                </div>
+                <div class="text-center">
+                    <h4 class="">Pankaj Kumar</h4>
+                    <h6 class="text-center">Founder Coding Scholars</h6>
+                    <p class=" text-muted ">"It is always great working with Shivam! The quality, professionalism and timeliness of his work is second to none. Will definitely hire him again!"</p>
+                </div>
 
-                  </div>
               </div>
           </div>
-          <div class="carousel-item">
-            <div class="container">
-                <div class="row align-items-center">
-                  <div class="row justify-content-center">
-                      <img class="rounded-circle" style="width: 150px;" src="{% static 'images/clients/03.jpg' %}">
-                  </div>
-                  <div class="text-center">
-                      <h4 class="">Pankaj Kumar</h4>
-                      <h6 class="text-center">MD, C.G.T</h6>
-                      <p class=" text-muted ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit doloremque.</p>
-                  </div>
-
-                </div>
-            </div>
           </div>
+          
           <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center">
                   <div class="row justify-content-center">
-                      <img class="rounded-circle" style="width: 150px;" src="{% static 'images/clients/04.jpg' %}">
+                      <img class="rounded-circle" style="width: 120px;" src="{% static 'images/CK.jpg' %}">
                   </div>
                   <div class="text-center">
-                      <h4 class="">Pankaj Kumar</h4>
-                      <h6 class="text-center">MD, C.G.T</h6>
-                      <p class=" text-muted ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit doloremque.</p>
+                      <h4 class="">Chandrakant Singh</h4>
+                      <h6 class="text-center">Founding Chairman CGT</h6>
+                      <p class=" text-muted ">Overall very pleased with Shivam .I recommend anyone that is looking for a custom website to give them a call and speak to Shivam, he will guide you in the right direction.</p>
                   </div>
 
                 </div>
@@ -157,7 +146,8 @@
       </div>
   </section>
 <!--contact-->
-<h2 class="text-center">Contact Us</h2>
+
+<h2 class="text-center text-muted" style="font-weight: bold;">Contact Me</h2>
 
 <section class="py-7 py-md-9 border-bottom border-gray-300" id="info">
   <div class="container">
@@ -179,7 +169,7 @@
 
         <!-- Link -->
         <div class="mb-5 mb-md-0">
-          <a href="#!" class="h4 text-primary" style="text-decoration: none; font-weight: normal; font-size: larger;">
+          <a href="https://twitter.com/Shivam12084" class="h4 text-primary" style="text-decoration: none; font-weight: normal; font-size: larger;">
             On Twitter
           </a>
         </div>
@@ -208,7 +198,7 @@
         </h6>
 
         <!-- Link -->
-        <a href="#!" class="h4" style="text-decoration: none; font-weight: normal; font-size: larger;">
+        <a href="mailto: shivamsingh12084@gmail.com" class="h4" style="text-decoration: none; font-weight: normal; font-size: larger;">
           shivamsingh12084@gmail.com
         </a>
 
@@ -216,16 +206,7 @@
     </div> <!-- / .row -->
   </div>
 </section>
-<div class=" text-secondary px-4 py-5 text-center" style="background-color: #f7f5f5;">
-  <div class="py-5">
-    
-    <div class="col-lg-6 mx-auto">
-      <p class=" mb-4"><h5>Let's talk about your idea.</h5></p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn  btn-primary rounded-pill px-4 me-sm-3 "><a href="{% url 'contact' %}" style="text-decoration: none; color: white;">Contact Me</a></button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
   
 {% endblock content %}
