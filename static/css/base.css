@@ -80,7 +80,7 @@ body, html {
 }
 .testheight {
     height: 20vh;
-    background-image: url(/static/images/testimonials/1);
+    
 }
 .bg-testimonial {
     background-color: #f3fbfe !important;

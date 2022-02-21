@@ -1,0 +1,161 @@
+
+body, html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+:root {
+    --fontfamily:var(--bs-body-font-family)
+    --fontsize:var(--bs-body-font-size)
+    --fontweight:var(--bs-body-font-weight)
+    --lineheight:var(--bs-body-line-height)
+    --color:var(--bs-body-color)
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: black !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.55);
+    border-radius: 3px;
+    border-color: black !important;
+}
+.navbarcolor {
+    background-color: black;
+}
+
+
+
+/* Hero Section */
+.bgimage {
+
+
+
+    background: url("/static/images/personalweb.d823ce601932.png");
+    object-fit: cover;
+}
+.hero-top-margin {
+    margin-top: 5rem;
+}
+.upper-hero-text {
+    color: gray;
+}
+.main-hero-text {
+    font-size: calc(2rem + 2.1vw) !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+.lower-hero-text {
+   
+}
+
+.btn-primary {
+    background-color: linear-gradient(to right,#1345e6 0%,#ed239f 51%,#1345e6 100%) !important;
+    background-image: linear-gradient(to right, #1345e6, #8138d8, #b229c6, #d51eb3, #ed239f);
+}
+.btn-primary:hover {
+    background-image: linear-gradient(to left, #1345e6, #8138d8, #b229c6, #d51eb3, #ed239f);
+}
+
+
+/* Services Section */
+.backgound-color {
+    background-color: coral;
+}
+.textstyle {
+    font-size: 1.1rem;
+}
+
+.bordercurv {
+    border-radius: 3rem !important;
+}
+
+/* Previous Work */
+.bg-secondary {
+    background-color: green !important;
+    background-image: url("/static/images/cta-bg.cfc4135285a7.png");
+    
+}
+.testheight {
+    height: 20vh;
+    
+}
+.bg-testimonial {
+    background-color: #f3fbfe !important;
+}
+
+
+/* footer */
+.footer-color {
+    background-color: black !important;
+}
+.widget-link {
+    color: gray;
+}
+.widget-title {
+    color: white;
+}
+.btn-social {
+    border-style: none !important;
+    border-width: 0 !important;
+    
+
+}
+.icon-size {
+    width: 15px;
+}
+.icon-color {
+    color: white;
+}
+.navbar-shadow {
+    box-shadow: 0 0.125rem 0.625rem -0.1875rem rgb(0 0 0 / 10%) !;
+}
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+
+/* contact page */
+.fe-arrow-down:before {
+    content: "\e90c";
+}
+.text-gray-700 {
+    color: #506690!important;
+}
+.text-primary {
+    color: #335eea!important;
+}
+.border-gray-300 {
+    border-color: #d9e2ef!important;
+}
+.overlay {
+    position: relative;
+}
+.bg-cover {
+    background: no-repeat 50%/cover;
+}
+.py-10 {
+    padding-bottom: 5rem!important;
+    padding-top: 5rem!important;
+}
+.overlay-black:before {
+    background-color: #161c2d;
+}
+.overlay:before {
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pb-8 {
+    padding-bottom: 3rem!important;
+}
+.pt-8 {
+    padding-top: 3rem!important;
+}
