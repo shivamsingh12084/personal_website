@@ -11,7 +11,7 @@ from django.contrib import messages
 class HomePageView(FormView):
     form_class = ConsultationForm
     template_name = 'home.html'
-    success_url = 'http://127.0.0.1:8000'
+    success_url = 'contact'
 
     def form_valid(self, form):
         subject = "About consultation"
