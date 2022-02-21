@@ -16,6 +16,7 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 from environs import Env
 
+
 env = Env()
 env.read_env()
 
@@ -44,11 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third Party
+    'debug_toolbar',
     # Local
     'pages',
 ]
 
 MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware', # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware', # new
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -142,3 +148,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 MESSAGE_TAGS = {
     messages.SUCCESS: 'alert-success',
 }
+
+# Debug_toolbar
+# django-debug-toolbar
+import socket
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+
+
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 604800
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
