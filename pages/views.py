@@ -11,7 +11,7 @@ from django.contrib import messages
 class HomePageView(FormView):
     form_class = ConsultationForm
     template_name = 'home.html'
-    success_url = 'contact'
+    success_url = 'https://kumarshivam.herokuapp.com'
 
     def form_valid(self, form):
         subject = "About consultation"
@@ -37,7 +37,7 @@ class BlogPageView(TemplateView):
 class ContactPageView(FormView):
     form_class = DetailedContactForm
     template_name = 'contact.html'
-    success_url = 'https://kumarshivam.herokuapp.com'
+    success_url = '/contact'
 
     def form_valid(self , form):
         subject = form.cleaned_data['subject']
