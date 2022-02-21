@@ -8,6 +8,8 @@ django = "*"
 psycopg2-binary = "*"
 environs = {extras = ["django"], version = "*"}
 django-debug-toolbar = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
